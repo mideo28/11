@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Diary — Иногда нужно просто уехать</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">TRAVEL&nbsp;DIARY</div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#destinations">Направления</a>
+      <a href="#route">Маршрут</a>
+      <a href="#gallery">Моменты</a>
+      <a href="#practical">Инфо</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☾</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" id="closeMenu" aria-label="Закрыть">×</button>
+  <a href="#destinations">Направления</a>
+  <a href="#route">Маршрут</a>
+  <a href="#gallery">Моменты</a>
+  <a href="#practical">Инфо</a>
+  <a href="#more">Другие истории</a>
+</div>
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <img class="hero-img" id="heroImg" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80" alt="Озеро в сосновом лесу на рассвете">
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">TRAVEL DIARY / 01</div>
+    <h1 class="hero-title">Иногда нужно просто уехать.</h1>
+    <p class="hero-sub">Истории о местах, людях и моментах, которые остаются с нами.</p>
+    <button class="hero-cta" onclick="document.getElementById('destinations').scrollIntoView()">
+      ОТКРЫТЬ ИСТОРИЮ
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="white" stroke-width="1.3"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- 2. DESTINATIONS -->
+<section id="destinations" class="wrap">
+  <div class="section-head fade-up">
+    <div class="eyebrow">Направления</div>
+    <h2 class="section-title">Куда ведёт дорога?</h2>
+    <p class="section-desc">Четыре истории, начавшиеся с одного и того же чувства — желания оказаться где-то ещё.</p>
+  </div>
+  <div class="dest-grid">
+    <div class="dest-card d1" data-country="KAZAKHSTAN" data-place="Бурабай" data-quote="Место, где город остаётся далеко позади.">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Бурабай, Казахстан">
+      <div class="scrim"></div>
+      <div class="dest-inner">
+        <div class="dest-country">KAZAKHSTAN</div>
+        <div class="dest-place">Бурабай</div>
+        <div class="dest-quote">«Место, где город остаётся далеко позади.»</div>
+      </div>
+    </div>
+    <div class="dest-card d2" data-country="JAPAN" data-place="Kyoto" data-quote="Тишина между храмами громче города.">
+      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80" alt="Киото, Япония">
+      <div class="scrim"></div>
+      <div class="dest-inner">
+        <div class="dest-country">JAPAN</div>
+        <div class="dest-place">Kyoto</div>
+        <div class="dest-quote">«Тишина между храмами громче города.»</div>
+      </div>
+    </div>
+    <div class="dest-card d3" data-country="ITALY" data-place="Dolomites" data-quote="Горы, которые меняют цвет каждый час.">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80" alt="Доломиты, Италия">
+      <div class="scrim"></div>
+      <div class="dest-inner">
+        <div class="dest-country">ITALY</div>
+        <div class="dest-place">Dolomites</div>
+        <div class="dest-quote">«Горы, которые меняют цвет каждый час.»</div>
+      </div>
+    </div>
+    <div class="dest-card d4" data-country="KOREA" data-place="Seoul" data-quote="Город, который не выключает свет.">
+      <img src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?auto=format&fit=crop&w=1600&q=80" alt="Сеул, Корея">
+      <div class="scrim"></div>
+      <div class="dest-inner">
+        <div class="dest-country">KOREA</div>
+        <div class="dest-place">Seoul</div>
+        <div class="dest-quote">«Город, который не выключает свет.»</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="wrap">
+    <div class="fade-up">
+      <div class="eyebrow">Выбор путешествия</div>
+      <h2 class="quiz-title">Что ты ищешь?</h2>
+    </div>
+    <div class="quiz-options" id="quizOptions">
+      <button class="quiz-opt" data-key="silence"><span class="num">01</span>Тишину</button>
+      <button class="quiz-opt" data-key="adventure"><span class="num">02</span>Приключение</button>
+      <button class="quiz-opt" data-key="new"><span class="num">03</span>Новые впечатления</button>
+      <button class="quiz-opt" data-key="culture"><span class="num">04</span>Культуру</button>
+      <button class="quiz-opt" data-key="nature"><span class="num">05</span>Природу</button>
+      <button class="quiz-opt" data-key="city"><span class="num">06</span>Большой город</button>
+    </div>
+    <div class="quiz-result" id="quizResult">
+      <div>
+        <div class="quiz-result-label">Ты выбрал:</div>
+        <h3 class="quiz-result-title" id="qrTitle">ПРИКЛЮЧЕНИЕ</h3>
+        <ul class="quiz-result-meta" id="qrMeta"></ul>
+        <button class="btn-line" onclick="document.getElementById('route').scrollIntoView()">
+          ПОСМОТРЕТЬ МАРШРУТ
+          <svg width="14" height="9" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.3"/></svg>
+        </button>
+      </div>
+      <img id="qrImg" src="" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- 4. ROUTE / TIMELINE -->
+<section class="route wrap" id="route">
+  <div class="section-head fade-up">
+    <div class="eyebrow">Маршрут · Алтай</div>
+    <h2 class="section-title">4 дня, 676 км, один день из них — ниже</h2>
+    <p class="section-desc">Горы, озёра и дороги. Вот как выглядел один день этого путешествия — час за часом.</p>
+  </div>
+  <div class="timeline" id="timeline">
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-time">07:20</div>
+      <h3 class="t-title">Начало</h3>
+      <p class="t-text">Раннее утро. Рюкзак у двери, кофе ещё горячий. Впереди — дорога, о которой мы думали всю зиму.</p>
+      <div class="t-img-wrap"><img class="t-img med" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80" alt="Утренний кофе перед дорогой"></div>
+    </div>
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-time">10:45</div>
+      <h3 class="t-title">Первая остановка</h3>
+      <p class="t-text">Небольшая деревня на полпути. Здесь дорога впервые замедляется, а разговоры — впервые становятся тише.</p>
+      <div class="t-img-wrap"><img class="t-img wide" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80" alt="Дорога в горы"></div>
+    </div>
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-time">14:30</div>
+      <h3 class="t-title">Дорога в горы</h3>
+      <p class="t-text">Асфальт заканчивается там, где начинается настоящий вид. Дальше — только гравий, серпантин и высота.</p>
+      <div class="t-img-wrap"><img class="t-img tall" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=80" alt="Панорама горной дороги"></div>
+    </div>
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-time">18:50</div>
+      <h3 class="t-title">Закат</h3>
+      <p class="t-text">Мы остановились не потому, что закончилась дорога, а потому что невозможно было ехать дальше и не смотреть.</p>
+      <div class="t-img-wrap"><img class="t-img wide" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=80" alt="Закат в горах"></div>
+    </div>
+    <div class="t-item">
+      <div class="t-dot"></div>
+      <div class="t-time">23:10</div>
+      <h3 class="t-title">Ночь</h3>
+      <p class="t-text">Палатка, костёр и небо без единого огня города. Последний кадр дня получился почти случайно.</p>
+      <div class="t-img-wrap"><img class="t-img med" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" alt="Звёздное небо над лагерем"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. GALLERY -->
+<section class="gallery wrap" id="gallery">
+  <div class="section-head fade-up">
+    <div class="eyebrow">Моменты</div>
+    <h2 class="section-title">Страницы дневника</h2>
+    <p class="section-desc">Не всё в путешествии помещается в маршрут. Остальное осталось здесь — в кадрах.</p>
+  </div>
+
+  <div class="g-row r1">
+    <div class="g-cell g-h-tall"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1000&q=80" alt="Тропа в горах"><span class="g-cap">06:42 — первые лучи солнца</span></div>
+    <div class="g-cell g-h-tall"><img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800&q=80" alt="Отражение в озере"></div>
+  </div>
+
+  <div class="g-row r2">
+    <div class="g-cell g-h-short"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80" alt="Лесная тропа"><span class="g-cap">12:18 — случайная остановка</span></div>
+    <div class="g-text-cell"><p>«Дорога петляла дольше, чем показывала карта.»</p></div>
+    <div class="g-cell g-h-short"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Вид со скалы"></div>
+  </div>
+
+  <div class="g-row r3">
+    <div class="g-cell g-h-med"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" alt="Палатка ночью"></div>
+    <div class="g-cell g-h-med"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Золотой час"><span class="g-cap">21:03 — последний кадр дня</span></div>
+  </div>
+</section>
+
+<!-- 7. PERSONAL NOTE -->
+<section class="note wrap">
+  <div class="fade-up">
+    <div class="note-title">Что осталось после поездки?</div>
+    <p class="note-quote">«Я ехала сюда ради фотографий. Но больше всего запомнилась тишина, которую невозможно сфотографировать.»</p>
+    <div class="note-sign">— из дневника, день 3</div>
+  </div>
+</section>
+
+<!-- 8. STATS -->
+<section class="stats">
+  <div class="wrap stats-grid" id="statsGrid">
+    <div class="stat"><div class="stat-num" data-target="4" data-suffix="">29</div><div class="stat-label">Дня в пути</div></div>
+    <div class="stat"><div class="stat-num" data-target="620" data-suffix="">16700</div><div class="stat-label">Километров</div></div>
+    <div class="stat"><div class="stat-num" data-target="7" data-suffix="">7</div><div class="stat-label">Мест</div></div>
+    <div class="stat"><div class="stat-num" data-target="38" data-suffix="">200+</div><div class="stat-label">Фотографий</div></div>
+    <div class="stat"><div class="stat-num" data-target="145" data-suffix=" 000 ₸">145 000</div><div class="stat-label">Бюджет поездки</div></div>
+  </div>
+</section>
+
+<!-- 9. PRACTICAL -->
+<section class="practical wrap" id="practical">
+  <div class="section-head fade-up">
+    <div class="eyebrow">Практическая часть</div>
+    <h2 class="section-title">Если вы захотите повторить этот путь</h2>
+  </div>
+  <div class="prac-grid">
+    <div class="prac-block">
+      <h3>Сколько стоит?</h3>
+      <div class="cost-row"><span>Дорога</span><span>38 000 ₸</span></div>
+      <div class="cost-row"><span>Проживание</span><span>52 000 ₸</span></div>
+      <div class="cost-row"><span>Еда</span><span>27 000 ₸</span></div>
+      <div class="cost-row"><span>Транспорт</span><span>18 000 ₸</span></div>
+      <div class="cost-row"><span>Развлечения</span><span>10 000 ₸</span></div>
+      <div class="cost-row total"><span>Итого</span><span>₸ 145 000</span></div>
+    </div>
+    <div class="prac-block">
+      <h3>Что взять?</h3>
+      <ul class="pack-list">
+        <li>Рюкзак на 40+ литров</li>
+        <li>Камеру и запасной аккумулятор</li>
+        <li>Удобную треккинговую обувь</li>
+        <li>Куртку от ветра и дождя</li>
+      </ul>
+    </div>
+    <div class="prac-block">
+      <h3>Когда ехать?</h3>
+      <div class="season-row"><span>Весна</span><span class="stars">4/5</span></div>
+      <div class="season-row"><span>Лето</span><span class="stars">5/5</span></div>
+      <div class="season-row"><span>Осень</span><span class="stars">2/5</span></div>
+      <div class="season-row"><span>Зима</span><span class="stars">3/5</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. MORE STORIES -->
+<section class="more wrap" id="more">
+  <div class="section-head fade-up">
+    <div class="eyebrow">Другие истории</div>
+    <h2 class="section-title">Продолжить путешествие?</h2>
+  </div>
+  <div class="more-grid">
+    <div class="more-card" onclick="document.getElementById('destinations').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80" alt="Япония">
+      <div class="scrim"></div>
+      <div class="more-inner">
+        <div class="more-num">01 — Япония</div>
+        <div class="more-title">Kyoto</div>
+        <div class="more-sub">Город, который никогда не спит.</div>
+      </div>
+    </div>
+    <div class="more-card" onclick="document.getElementById('destinations').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Казахстан">
+      <div class="scrim"></div>
+      <div class="more-inner">
+        <div class="more-num">02 — Казахстан</div>
+        <div class="more-title">Бурабай</div>
+        <div class="more-sub">Там, где заканчивается дорога.</div>
+      </div>
+    </div>
+    <div class="more-card" onclick="document.getElementById('destinations').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80" alt="Италия">
+      <div class="scrim"></div>
+      <div class="more-inner">
+        <div class="more-num">03 — Италия</div>
+        <div class="more-title">Dolomites</div>
+        <div class="more-sub">Три дня среди гор.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FINAL -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-eyebrow">TRAVEL DIARY / КОНЕЦ ГЛАВЫ</div>
+    <h2 class="final-title">У каждой дороги есть история.</h2>
+    <p class="final-sub">Какую историю ты расскажешь следующей?</p>
+    <button class="final-cta" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      НАЧАТЬ НОВОЕ ПУТЕШЕСТВИЕ
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="#EFE7D6" stroke-width="1.3"/></svg>
+    </button>
+  </div>
+</section>
+
+<footer>Travel Diary — цифровой дневник путешествий</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
